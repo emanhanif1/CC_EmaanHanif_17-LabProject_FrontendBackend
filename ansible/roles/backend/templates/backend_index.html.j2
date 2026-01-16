@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Backend {{ inventory_hostname }}</title>
+  <style>
+    body {
+      background-color: white;
+      font-family: Arial, sans-serif; /* Fallback font */
+    }
+    h1 {
+      color: #FFB6C1; /* Light Pink */
+      font-family: "Britannic Bold", "Britannic", sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Backend server: {{ inventory_hostname }}</h1>
+  <p>Private IP: {{ ansible_default_ipv4.address | default('unknown') }}</p>
+</body>
+</html>
